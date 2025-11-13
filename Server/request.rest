@@ -4,6 +4,54 @@
 @port = 8000
 @host = {{protocol}}{{hostname}}:{{port}}
 ### @token = 12|ibiwTdr77o8ppToh1tBxIkckBNb8ECjIjLgaweTaa757cdef
-
+ 
 ### teszt
 get {{host}}/api/
+ 
+ 
+### get methods
+OPTIONS {{host}}/api/instruments
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer
+ 
+ 
+ 
+### get instruments
+get {{host}}/api/instruments
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer
+ 
+ 
+### get instruments by id
+get {{host}}/api/instruments/1
+ 
+ 
+### post instruments
+POST  {{host}}/api/instruments
+Accept: application/json
+Content-Type: application/json
+ 
+{
+   
+    "name": "f3333",
+    "description": "Kézzel termelt egészség",
+    "brand": "brandike",
+    "price": 8000,
+    "quantity": 22
+}
+ 
+### delete instrument by id
+delete {{host}}/api/instruments/15
+ 
+ 
+### patch products
+PATCH   {{host}}/api/instruments/14
+Accept: application/json
+Content-Type: application/json
+ 
+{
+    "description": "Te ki vagy bogyó",
+    "price":8001
+}
